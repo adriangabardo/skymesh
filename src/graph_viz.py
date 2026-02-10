@@ -14,7 +14,7 @@ def draw_hub_subgraph(graph: nx.DiGraph, n: int = 50) -> None:
         subgraph, seed=42, k=1.2, iterations=100  # increase node repulsion
     )
 
-    plt.figure(figsize=(10, 10))
+    plt.figure(figsize=(10, 10), num="Skymesh")
 
     # draw edges first (lighter, thinner)
     nx.draw_networkx_edges(subgraph, pos, alpha=0.25, width=0.8, arrows=False)

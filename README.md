@@ -49,3 +49,21 @@ Sample route:
 ```
 
 The graph viz will then open, and remain opened until the process is exited.
+
+## Versioning and Article References
+
+This repository uses git tags to align code versions with articles in _The Graph Series_.
+
+Tags follow the format:
+
+`v{article}.{major}.{minor}`
+
+Where:
+
+- `article` refers to the article number in the series
+- `major` indicates a conceptual change within that article’s scope
+- `minor` indicates non-breaking changes such as refactors or small fixes
+
+For example, `v2.0.1` corresponds to Article II (_Getting Started and Data Ingestion_), with a minor revision applied after initial publication.
+
+Each article in the series references a specific tag so readers can check out the exact code state used in that article.
