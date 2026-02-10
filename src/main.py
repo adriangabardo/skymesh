@@ -21,16 +21,33 @@ def main() -> None:
 
     # draw_hub_subgraph(graph, n=20)
 
-    routes = find_flight_routes(
-        origin="YYC",
-        destination="SYD",
-        graph=graph,
-        max_legs=3,
-    )
+    airport_pairs = [
+        ("SYD", "MEL"),
+        ("YYC", "SYD"),
+        ("LHR", "JFK"),
+        ("CDG", "DXB"),
+    ]
 
-    print("Flight routes:")
-    for r in routes:
-        print(r)
+    for origin, destination in airport_pairs:
+        print("\n" + "=" * 60)
+        print(f"Searching routes: {origin} -> {destination}")
+
+        routes = find_flight_routes(
+            origin=origin,
+            destination=destination,
+            graph=graph,
+            max_legs=3,
+            max_routes=3,
+        )
+
+        if not routes:
+            print("No routes found.")
+            continue
+
+        for r in routes:
+            print(r)
+
+        print()  # spacing between searches
 
 
 if __name__ == "__main__":
