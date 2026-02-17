@@ -1,7 +1,7 @@
 import json
 from graph_build import build_graph
-from graph_viz import draw_hub_subgraph
 from services.path_finder import find_flight_routes
+from graph_viz import draw_geographic_projection
 
 
 def main() -> None:
@@ -19,7 +19,7 @@ def main() -> None:
     # sample_edge = next(iter(graph.edges))
     # print(sample_edge, json.dumps(graph.edges[sample_edge], indent=4, sort_keys=False))
 
-    # draw_hub_subgraph(graph, n=20)
+    # draw_geographic_projection(graph, n=50)
 
     airport_pairs = [
         ("SYD", "MEL"),
